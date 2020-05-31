@@ -9,6 +9,6 @@
     "@babel/preset-env": "^7.10.1"
   },
   "scripts": {
-    "dev": "babel ./main.js -o ./bundle.js -w"
+    "dev": "babel ./conceitos/operacoesemarray.js -o ./bundle.js -w"
   }
 }
