@@ -1,6 +1,8 @@
+// conceitos - classes
 class List {
     constructor(){ // primeiro método a ser executado toda vez que instaciarmos a classe
         this.data = [];
+        this.todos = [];
     }
 
     add(data){
@@ -9,11 +11,10 @@ class List {
     }
 }
 
-class todoList extends List{ // irá herdar as propriedades da classe List
+class todoList extends List{ // esta classe irá herdar as propriedades da classe List. Sendo então, uma classe filha 
     constructor(){ 
         super();
-        
-        this.usuario = 'Eduardo';
+        this.usuario = 'Mahria';
     }
     mostraUsuario(){
         console.log(this.usuario)
@@ -26,15 +27,20 @@ class todoList extends List{ // irá herdar as propriedades da classe List
 }
 const minhaLista = new todoList();
 
-document.getElementById('novotodo').onclick = function() {
-    minhaLista.addTodo();
-}
+// document.getElementById('novotodo').onclick = function() {
+//    minhaLista.addTodo();
+// }
 
-document.getElementById('novotodo').onclick = function(){
-    minhaLista.add('um outro novo todo')
-}
+// document.getElementById('novotodo').onclick = function(){
+//     minhaLista.add('um outro novo todo')
+// }
 
 minhaLista.mostraUsuario()
+
+// MÉTODO ESTÁTICOS 
+    // utilizados como utilitários para retorna valores baseados nos paremetros passados a eles
+    // executam a sua função independemente do restante da classe 
+    // geralmente nem vai ter constructor 
 
 class Matematica {
     static Soma(a, b){
